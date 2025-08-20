@@ -1,4 +1,4 @@
-from src.utils import benchmark_operator
+from src.tooling.benchmark import benchmark_operator
 
 @benchmark_operator("read_tools")
 def file_parquest(**kwargs):
