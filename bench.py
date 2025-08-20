@@ -1,5 +1,5 @@
-from src.config import Config
-from src.benchmark import benchmark
+from src.tooling.config import Config
+from src.tooling.benchmark import benchmark
 from src.operations import *
 import argparse
 from typing import List
