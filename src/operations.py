@@ -1,9 +1,14 @@
+from src.utils import benchmark_operator
+
+@benchmark_operator("read_tools")
 def file_parquest(**kwargs):
     number = [i * i for i in range(50000)]
 
+@benchmark_operator("read_tools")
 def file_csv(**kwargs):
     number = [i * i for i in range(50000)]
 
+@benchmark_operator("read_tools")
 def file_duckdb(**kwargs):
     number = [i * i for i in range(50000)]
 
