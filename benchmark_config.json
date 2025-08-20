@@ -1,0 +1,12 @@
+{
+    "test_group": {
+        "storage": [],
+        "read_tools": [
+            "file_parquet",
+            "file_csv",
+            "file_duckdb"
+        ],
+        "query_tools": [],
+        "pipelines": []
+    }
+}
