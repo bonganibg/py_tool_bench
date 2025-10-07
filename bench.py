@@ -38,11 +38,13 @@ def run_benchmarks(operation_group: str, output: str):
         'cpu': pl.Float64,
         'mem': pl.Float64,
         'duration': pl.Float64
-    })
+    })    
 
-    for func in operation_group_functions:                
-        results = benchmark(func, input_size=200, iter=1)                
+    for func in operation_group_functions:                        
+        results = benchmark(func, input_size=5000, iter=1)                
         df = pl.concat([df, results], how="vertical")
+
+    print(df)
 
     __write_results(df, output)
         

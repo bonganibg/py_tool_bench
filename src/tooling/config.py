@@ -22,6 +22,7 @@ class Config(metaclass=SingletonMeta):
         self.groups[group_name].append(func)
 
     def get_groups(self):
+        print(self.groups)
         return self.groups
     
     def get(self, group_name: str) -> List[Callable]:

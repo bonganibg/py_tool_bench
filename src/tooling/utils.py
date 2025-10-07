@@ -1,5 +1,5 @@
 import os
-from src.config import Config
+from src.tooling.config import Config
 
 config = Config()
 

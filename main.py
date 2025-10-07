@@ -1,6 +1,4 @@
-from src.config import Config
-from src.operations import *
+import polars as pl 
 
-config = Config()
-
-print(config.get_groups())
+df = pl.read_parquet("./data/parquet/A.csv.parquet")
+print(df)

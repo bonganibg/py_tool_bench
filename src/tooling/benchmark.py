@@ -14,7 +14,7 @@ def system_performance(func, *args, **kwargs):
     cpu_after = process.cpu_times()
     mem_after = process.memory_info().rss
 
-    memory_usage = mem_after - mem_before
+    memory_usage = (mem_after - mem_before) / (1024 * 1024)
     cpu_usage = cpu_after.user - cpu_before.user
 
     return cpu_usage, memory_usage
@@ -25,7 +25,7 @@ def time_performance(func,*args, **kwargs):
     iter = kwargs.pop('iter', 100) or 1
 
     duration = timeit(lambda: func(**kwargs), number=iter)
-    return duration / iter
+    return duration
 
 def benchmark(func, *args, **kwargs) -> pl.DataFrame:
     cpu, mem = system_performance(func, *args, **kwargs)
